@@ -1,6 +1,7 @@
 require 'rspec'
 require 'board'
 require 'spec_helper'
+require 'byebug'
 
 describe Board do
   subject(:board) do
@@ -72,6 +73,7 @@ describe Board do
 
     it "doesn't place stones in the opponent's cup" do
       # not a starting move; assumed to be an automatic move after finishing a play on this cup full of stones
+      # debugger
       board.make_move(12, "Erica")
       expect(board.cups[13]).to be_empty
       expect(board.cups[3]).to eq( six_stone_cup )
@@ -89,6 +91,7 @@ describe Board do
 
     context "when the turn ended on an empty cup" do
       it "returns :switch" do
+        debugger
         expect(board.make_move(10, "James")).to eq(:switch)
       end
     end
