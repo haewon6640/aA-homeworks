@@ -11,23 +11,32 @@ class Simon
   end
 
   def play
-
+    take_turn
+    until game_over
+      take_turn
+    end
   end
 
   def take_turn
-
+    show_sequence
+    require_sequence
+    if !game_over
+      round_success_message
+      @sequence_length += 1
+    end    
   end
 
   def show_sequence
-
+    add_random_color
   end
 
   def require_sequence
-
+    p "Say the sequence"
+    gets.chomp.split("")
   end
 
   def add_random_color
-    debugger
+    seq << COLORS.sample
   end
 
   def round_success_message
