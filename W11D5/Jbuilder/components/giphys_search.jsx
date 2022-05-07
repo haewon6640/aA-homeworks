@@ -6,10 +6,15 @@ export default class GiphysSearch extends React.Component {
     constructor(props) {
         super(props);
     }
+    componentDidMount() {
+        this.props.fetchSearchGiphys();
+    }
 
     render() {
+        return (
         <div>
             Hi
         </div>
+        )
     }
 }

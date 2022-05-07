@@ -90,20 +90,29 @@
 /*!**********************************!*\
   !*** ./actions/giphy_actions.js ***!
   \**********************************/
-/*! exports provided: fetchSearchGiphys */
+/*! exports provided: RECEIVE_SEARCH_GIPHYS, receiveSearchGiphys, fetchSearchGiphys */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SEARCH_GIPHYS", function() { return RECEIVE_SEARCH_GIPHYS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveSearchGiphys", function() { return receiveSearchGiphys; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSearchGiphys", function() { return fetchSearchGiphys; });
 /* harmony import */ var _util_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/api_util */ "./util/api_util.js");
- // export "RECEIVE_SEARCH_GIPHYS
 
+var RECEIVE_SEARCH_GIPHYS = "RECEIVE_SEARCH_GIPHYS"; // export "RECEIVE_SEARCH_GIPHYS
+
+var receiveSearchGiphys = function receiveSearchGiphys(giphys) {
+  return {
+    type: RECEIVE_SEARCH_GIPHYS,
+    giphys: giphys
+  };
+};
 var fetchSearchGiphys = function fetchSearchGiphys(name) {
   return function (dispatch) {
-    return (// APIUtil.fetchSearchGiphys
-      "df"
-    );
+    return _util_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchSearchGiphys"]().then(function (giphys) {
+      return dispatch(receiveSearchGiphys(giphys.data));
+    });
   };
 };
 
@@ -134,7 +143,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/components/giphys_index_item.jsx: Unexpected token (1:28)\n\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mGiphysIndexItem\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    at _class.raise (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:3939:15)\n    at _class.unexpected (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:5248:16)\n    at _class.parseVar (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:7780:18)\n    at _class.parseVarStatement (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:7606:10)\n    at _class.parseStatementContent (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:7203:21)\n    at _class.parseStatement (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:7153:17)\n    at _class.parseExportDeclaration (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:8244:17)\n    at _class.parseExport (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:8191:31)\n    at _class.parseStatementContent (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:7240:27)\n    at _class.parseStatement (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:7153:17)\n    at _class.parseBlockOrModuleBlockBody (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:7707:23)\n    at _class.parseBlockBody (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:7694:10)\n    at _class.parseTopLevel (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:7118:10)\n    at _class.parse (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:8521:17)\n    at parse (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/parser/lib/index.js:10513:38)\n    at parser (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/core/lib/transformation/index.js:44:43)\n    at runAsync (/home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/core/lib/transformation/index.js:35:14)\n    at /home/haewon6640/app_academy_projects/aA-homeworks/W11D5/Jbuilder/node_modules/@babel/core/lib/transform.js:34:34\n    at processTicksAndRejections (node:internal/process/task_queues:78:11)");
 
 /***/ }),
 
@@ -184,9 +193,14 @@ function (_React$Component) {
   }
 
   _createClass(GiphysSearch, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchSearchGiphys();
+    }
+  }, {
     key: "render",
     value: function render() {
-      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Hi");
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Hi");
     }
   }]);
 
@@ -214,14 +228,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function mapStateToProps(state) {
-  return {};
+  return {
+    giphys: state.giphys
+  };
 }
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    fetchSearchGiphys: _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_2__["fetchSearchGiphys"]
+  };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_giphys_search__WEBPACK_IMPORTED_MODULE_1__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(null, mapDispatchToProps)(_giphys_search__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -306,6 +324,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/root */ "./components/root.jsx");
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/store */ "./store/store.js");
 /* harmony import */ var _util_api_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util/api_util */ "./util/api_util.js");
+/* harmony import */ var _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/giphy_actions */ "./actions/giphy_actions.js");
+
 
 
 
@@ -315,6 +335,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var root = document.getElementById('root');
   var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])();
   window.store = store;
+  window.receiveSearchGiphys = _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_5__["receiveSearchGiphys"];
   window.fetchSearchGiphys = _util_api_util__WEBPACK_IMPORTED_MODULE_4__["fetchSearchGiphys"];
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
@@ -2451,201 +2472,6 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 	return to;
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/process/browser.js":
-/*!*****************************************!*\
-  !*** ./node_modules/process/browser.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
 
 
 /***/ }),
@@ -24220,7 +24046,7 @@ module.exports = function(originalModule) {
 /*!************************************!*\
   !*** ./reducers/giphys_reducer.js ***!
   \************************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24228,13 +24054,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/giphy_actions */ "./actions/giphy_actions.js");
 
 
+var giphysReducer = function giphysReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+  var nextState = Object.assign({}, state);
+
+  switch (action.type) {
+    case _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SEARCH_GIPHYS"]:
+      Object.values(action.giphys).forEach(function (tea) {
+        return nextState[tea.id] = tea;
+      });
+      return nextState;
+
+    default:
+      return nextState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (giphysReducer);
+
 /***/ }),
 
 /***/ "./reducers/root_reducer.js":
 /*!**********************************!*\
   !*** ./reducers/root_reducer.js ***!
   \**********************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24243,6 +24089,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _giphys_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./giphys_reducer */ "./reducers/giphys_reducer.js");
 
 
+var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  giphys: _giphys_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+});
+/* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
 /***/ }),
 
@@ -24282,15 +24132,15 @@ var configureStore = function configureStore() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSearchGiphys", function() { return fetchSearchGiphys; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSearchGiphys", function() { return fetchSearchGiphys; });
 var fetchSearchGiphys = function fetchSearchGiphys(name) {
-  var url = "http://api.giphy.com/v1/gifs/search?q=".concat(name, "&api_key=").concat(process.env.GIPHY_API_KEY, "&limit=2");
+  var giphy_api_key = "hzCx7lBatCScs3t0FtruqtIb31Mi6zr9";
+  var url = "http://api.giphy.com/v1/gifs/search?q=".concat(name, "&api_key=").concat(giphy_api_key, "&limit=2");
   return $.ajax({
     url: url,
     method: 'GET'
   });
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ })
 

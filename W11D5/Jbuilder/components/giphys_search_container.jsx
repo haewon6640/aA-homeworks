@@ -4,12 +4,12 @@ import { fetchSearchGiphys } from '../actions/giphy_actions';
 
 function mapStateToProps(state) {
     return {
-        
+        giphys: state.giphys
     }
 }
 
 const mapDispatchToProps = dispatch => ({
-
+    fetchSearchGiphys
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(GiphysSearch)
+export default connect(null, mapDispatchToProps)(GiphysSearch)
